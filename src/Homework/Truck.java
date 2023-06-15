@@ -1,10 +1,10 @@
 package Homework;
 //4-й блок кода. Пример с грузовой машиной
-public class Truck {
+public class Truck extends Vehicle {
 
-    public String modelName;
-    public int wheelsCount;
-
+    public  Truck (String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
     public void updateTyre() {
         System.out.println("Меняем покрышку");
     }
