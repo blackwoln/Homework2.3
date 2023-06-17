@@ -1,6 +1,6 @@
 package Homework;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Servicable {
     private String modelName;
     private int wheelsCount;
 
@@ -13,17 +13,7 @@ public abstract class Vehicle {
         return modelName;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
     public int getWheelsCount() {
         return wheelsCount;
     }
-
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
-    }
-
-    public abstract void updateTyre();
 }

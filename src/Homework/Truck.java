@@ -1,19 +1,26 @@
 package Homework;
 //4-й блок кода. Пример с грузовой машиной
 public class Truck extends Vehicle {
-
-    public  Truck (String modelName, int wheelsCount) {
+    public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+
+    @Override
+    public void service() {
+        updateTyre();
+        checkEngine();
+        checkTrailer();
     }
 
-    public void checkEngine() {
+    private void updateTyre() {
+        System.out.println("Меняем покрышку грузовика");
+    }
+
+    private void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
 
-    public void checkTrailer() {
+    private void checkTrailer() {
         System.out.println("Проверяем прицеп");
     }
 }
